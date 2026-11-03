@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — NatureExplorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html">🌿 NatureExplorer</a>
+    </div>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="form.html" class="active" aria-current="page">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-page-container">
+    <h1 class="page-title">Регистрация нового исследователя</h1>
+    <form action="#" method="post" class="custom-form grid-form">
+      
+      <!-- Блок 1: Личные данные -->
+      <fieldset class="form-section-block">
+        <legend>Личные данные</legend>
+        
+        <div class="form-group">
+          <label for="firstname">Имя <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="30" placeholder="Иван" autocomplete="given-name">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">Фамилия <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="40" placeholder="Иванов" autocomplete="family-name">
+        </div>
+
+        <div class="form-group">
+          <label for="birthdate">Дата рождения <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="date" id="birthdate" name="birthdate" required min="1920-01-01" max="2018-12-31">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Любимая категория природы <span class="required-mark" aria-hidden="true">*</span></label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>-- Выберите категорию --</option>
+            <option value="Высокогорье и скалы">Высокогорье и скалы</option>
+            <option value="Хвойные леса">Хвойные леса</option>
+            <option value="Водные ресурсы">Водные ресурсы</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset class="form-section-block">
+        <legend>Контактная информация</legend>
+
+        <div class="form-group full-width">
+          <label for="email">Электронная почта <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com" autocomplete="email">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="phone">Номер телефона <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" required pattern="^\+7\s?[\(]?\d{3}[\)]?\s?\d{3}[-]?\d{2}[-]?\d{2}$" placeholder="+7 (999) 000-00-00" autocomplete="tel">
+          <small class="help-text">Формат: +7 (999) 000-00-00</small>
+        </div>
+      </fieldset>
+      <fieldset class="form-section-block full-width">
+        <legend>Данные учётной записи</legend>
+
+        <div class="form-group">
+          <label for="password">Пароль <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[A-ZА-Я]).{8,}" placeholder="Мин. 8 символов, заглавная буква и цифра">
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Повторите пароль <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="password" id="confirm-password" name="confirm_password" required minlength="8" placeholder="Повторите ваш пароль">
+        </div>
+
+        <div class="form-group full-width checkbox-group-inline">
+          <input type="checkbox" id="rules" name="rules" required>
+          <label for="rules">Я согласен с правилами сайта и обработкой персональных данных <span class="required-mark" aria-hidden="true">*</span></label>
+        </div>
+      </fieldset>
+      <div class="form-actions full-width">
+        <button type="submit" class="btn btn-submit"><a href="error.html">Зарегатса</a></button>
+        <a href="error.html"></a>
+      </div>
+
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 NatureExplorer. Все права защищены.</p>
+  </footer>
+</body>
+</html>
